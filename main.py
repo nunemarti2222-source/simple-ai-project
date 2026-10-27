@@ -1,15 +1,18 @@
-from textblob import TextBlob
+import numpy as np
+from sklearn.linear_model import LinearRegression
 
-print("Welcome to AI Sentiment Analyzer!")
 
-text = input("Enter a sentence in English: ")
+X = np.array([[1], [2], [3], [4], [5]])
+y = np.array([50, 80, 110, 140, 170])
 
-analysis = TextBlob(text)
-sentiment = analysis.sentiment.polarity
+model = LinearRegression()
 
-if sentiment > 0:
-    print("Sentiment: Positive 😊")
-elif sentiment < 0:
-    print("Sentiment: Negative 😔")
-else:
-    print("Sentiment: Neutral 😐")
+model.fit(X, y)
+
+print("=== Մեքենայական ուսուցման մոդելը պատրաստ է ===")
+
+rooms = 6
+predicted_price = model.predict([[rooms]])
+
+print(f"Սենյակների քանակը: {rooms}")
+print(f"Կանխատեսվող գինը: {predicted_price[0]:.2f} հազար դոլար")
