@@ -1,18 +1,16 @@
 import numpy as np
 from sklearn.linear_model import LinearRegression
 
-
-X = np.array([[1], [2], [3], [4], [5]])
-y = np.array([50, 80, 110, 140, 170])
+X = np.array([[15], [20], [25], [30], [35]])
+y = np.array([20, 40, 70, 100, 130])
 
 model = LinearRegression()
-
 model.fit(X, y)
 
-print("=== Մեքենայական ուսուցման մոդելը պատրաստ է ===")
+print("Project is ready")
 
-rooms = 6
-predicted_price = model.predict([[rooms]])
+temp = 38
+predicted_sales = model.predict([[temp]])
 
-print(f"Սենյակների քանակը: {rooms}")
-print(f"Կանխատեսվող գինը: {predicted_price[0]:.2f} հազար դոլար")
+print(f"tempreture: {temp}°C")
+print(f"predicted sales: {predicted_sales[0]:.1f} հատ պաղպաղակ")
