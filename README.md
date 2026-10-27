@@ -1,35 +1,19 @@
-
-# AI Sentiment Analyzer
+# Simple ML House Price Predictor
 
 ## About the Project
-AI Sentiment Analyzer is a simple Python project that analyzes the sentiment of English text. It classifies the text as positive, negative, or neutral.
-
-## Features
-- Accepts text from the user
-- Analyzes sentiment polarity
-- Displays the sentiment result
+This is a simple Machine Learning project using Python and Scikit-Learn. It implements a Linear Regression model to predict house prices based on the number of rooms.
 
 ## Technologies Used
 - Python
-- TextBlob
+- NumPy
+- Scikit-Learn
 
 ## Installation
 1. Clone the repository:
    `git clone https://github.com/nunemarti2222-source/simple-ai-project.git`
-
-2. Open the project folder:
-   `cd simple-ai-project`
-
-3. Install the required library:
+2. Install dependencies:
    `pip install -r requirements.txt`
 
 ## Usage
 Run the program:
 `python main.py`
-
-Enter an English sentence and the program will display its sentiment.
-
-## Project Structure
-- `main.py` — main program
-- `requirements.txt` — required Python library
-- `README.md` — project documentation
